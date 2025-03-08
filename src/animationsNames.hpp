@@ -7,7 +7,6 @@
 
 // Names of gif animation
 enum ANI_names{
-    ANI_SINGLEPLAYER,  // Animation in singleplayer
 
     // Global counter of all loaded animations
     ANI_count,

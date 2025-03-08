@@ -7,5 +7,4 @@
 
 // File names of the corresponding sounds
 const char* animationsFilesNames[ANI_count] = {
-    "ani/singlePlayer.gif",
 };

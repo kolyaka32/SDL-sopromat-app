@@ -7,6 +7,4 @@
 
 // File names of the corresponding sounds
 const char* soundsFilesNames[SND_count] = {
-    "snd/turn.wav",
-    "snd/reset.wav",
 };

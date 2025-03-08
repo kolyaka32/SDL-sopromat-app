@@ -21,26 +21,6 @@ enum IMG_names : unsigned {
     IMG_GUI_FLAG_GER,
     IMG_GUI_FLAG_BEL,
 
-    // Main game part
-    // White figures
-    IMG_GAME_WHITE_PAWN,
-    IMG_GAME_WHITE_BISHOP,
-    IMG_GAME_WHITE_ROOK,
-    IMG_GAME_WHITE_KNIGHT,
-    IMG_GAME_WHITE_QUEEN,
-    IMG_GAME_WHITE_KING,
-
-    // Black figures
-    IMG_GAME_BLACK_PAWN,
-    IMG_GAME_BLACK_BISHOP,
-    IMG_GAME_BLACK_ROOK,
-    IMG_GAME_BLACK_KNIGHT,
-    IMG_GAME_BLACK_QUEEN,
-    IMG_GAME_BLACK_KING,
-
-    // Point, where figure can go
-    IMG_GAME_POINT_MOVE_TO,
-
     // Global counter of all textures
     IMG_count,
 };

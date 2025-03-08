@@ -9,8 +9,6 @@
 // Names of music tracks
 enum MUS_names{
     MUS_MENU,          // Music for menu
-    MUS_MAIN,          // Music of cycles game
-    MUS_SINGLEPLAYER,  // Special music for singleplayer mode
 
     // Global counter of all loaded sounds
     MUS_count,

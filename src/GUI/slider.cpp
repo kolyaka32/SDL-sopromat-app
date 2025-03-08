@@ -21,9 +21,9 @@ Slider::Slider(const Window& _target, float _X, float _Y, unsigned _startValue,
     SDL_GetTextureSize(textureButton, &buttonRect.w, &buttonRect.h);
 
     // Setting it to need place
-    rect.x = SCREEN_WIDTH * _X - rect.w / 2;
-    rect.y = SCREEN_HEIGHT * _Y - rect.h / 2;
-    buttonRect.y = SCREEN_HEIGHT * _Y - buttonRect.h / 2;
+    rect.x = WINDOW_WIDTH * _X - rect.w / 2;
+    rect.y = WINDOW_HEIGHT * _Y - rect.h / 2;
+    buttonRect.y = WINDOW_HEIGHT * _Y - buttonRect.h / 2;
     buttonRect.x = rect.x + _startValue - buttonRect.w / 2;
 }
 

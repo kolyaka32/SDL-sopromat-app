@@ -9,16 +9,11 @@
 // Starting basic template with main theme
 SelectCycle::SelectCycle(const App& _app)
 : BaseCycle(_app),
-titleText{_app.window, {"Chess", "Шахматы", "Schach", "Шахматы"}, 64, 0.5, 0.1, 3, WHITE},
-singleplayerButton{_app.window, {"Singleplayer", "Одиночная игра", "Einzelspiel", "Адзіночная гульня"}, 24, 0.5, 0.3, WHITE},
-twoPlayerButton{_app.window, {"Two players", "Два игрока", "Zwei Spieler", "Два гульца"}, 24, 0.5, 0.5, WHITE},
-serverButton{_app.window, {"Create server", "Создать сервер", "Server erstellen", "Стварыць сервер"}, 24, 0.5, 0.7, WHITE},
-connectButton{_app.window, {"Connect", "Присоединиться", "Beitreten", "Далучыцца"}, 24, 0.5, 0.9, WHITE} {
-    // Resetting figures color
-    for (unsigned i=IMG_GAME_WHITE_PAWN; i<=IMG_GAME_BLACK_KING; ++i) {
-        SDL_SetTextureColorMod(_app.window.getTexture(IMG_names(i)), 0, 0, 0);
-    }
-
+titleText{_app.window, {"Sopromat app", "Сопромат приложуха", "Schach", "Шахматы"}, 64, 0.5, 0.1, 3, WHITE},
+singleplayerButton{_app.window, {"Computing", "Расчёт", "Einzelspiel", "Адзіночная гульня"}, 24, 0.5, 0.3, WHITE},
+twoPlayerButton{_app.window, {"нихт", "нихт", "Zwei Spieler", "Два гульца"}, 24, 0.5, 0.5, WHITE},
+serverButton{_app.window, {"нихт", "нихт", "Server erstellen", "Стварыць сервер"}, 24, 0.5, 0.7, WHITE},
+connectButton{_app.window, {"нихт", "нихт", "Beitreten", "Далучыцца"}, 24, 0.5, 0.9, WHITE} {
     // Starting menu song (if wasn't started)
     if(!isRestarted()) {
         _app.music.start(MUS_MENU);
@@ -60,14 +55,16 @@ void SelectCycle::getKeysInput(App& _app, SDL_Keycode _key) {
 }
 
 void SelectCycle::update(App& _app) {
-    background.update();
+    //background.update();
     settings.update(_app);
 }
 
 // Drawing background with all buttons
 void SelectCycle::draw(const App& _app) const {
     // Bliting background
-    background.blit(_app.window);
+    //background.blit(_app.window);
+    _app.window.setDrawColor(BLACK);
+    _app.window.clear();
 
     // Bliting title
     titleText.blit(_app.window);

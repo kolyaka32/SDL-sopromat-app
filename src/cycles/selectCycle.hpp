@@ -7,13 +7,13 @@
 
 #include "baseCycle.hpp"
 #include "../GUI/baseGUI.hpp"
-#include "../game/background.hpp"
+//#include "../game/background.hpp"
 
 
 // Cycle for select variants to start
 class SelectCycle : public BaseCycle {
  private:
-    MovingBackground background;
+    //MovingBackground background;
 
     // GUI objects
     GUI::HighlightedStaticText titleText;

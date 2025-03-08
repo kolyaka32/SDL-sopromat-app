@@ -8,6 +8,4 @@
 // File names of the corresponding music
 const char* musicFilesNames[MUS_count] = {
     "mus/menu.mp3",
-    "mus/main.mp3",
-    "mus/singlePlayer.mp3",
 };

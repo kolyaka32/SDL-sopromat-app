@@ -107,7 +107,7 @@ void SettingsMenu::update(App& _app) {
 
             // Playing sound effect for understanding loud
             if (getTime() > nextSound) {
-                _app.sounds.play(SND_TURN);
+                //_app.sounds.play(SND_TURN);
 
                 nextSound = getTime() + 400;
             }

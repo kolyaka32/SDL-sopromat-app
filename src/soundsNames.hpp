@@ -7,8 +7,6 @@
 
 // Names of sound effects
 enum SND_names{
-    SND_TURN,   // Sound of player's turn
-    SND_RESET,  // Sound of field reset
 
     // Global counter of all loaded sounds
     SND_count,

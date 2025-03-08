@@ -6,7 +6,7 @@
 #pragma once
 
 #include "../data/cycleTemplate.hpp"
-#include "../game/SettingsMenu.hpp"
+#include "../interface/SettingsMenu.hpp"
 
 // Base cycle for use in any game mode
 class BaseCycle : public CycleTemplate {
