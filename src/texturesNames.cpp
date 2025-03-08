@@ -20,4 +20,13 @@ const char* texturesFilesNames[IMG_count] = {
     "img/GUI/Flag_GER.png",
     "img/GUI/Flag_BEL.png",
 
+    "img/computing/circle.png",
+    "img/computing/single-hidge.png",
+    "img/computing/double-hidge.png",
+    "img/computing/sealing.png",
+
+    "img/computing/circle.png",
+    "img/computing/circle.png",
+    "img/computing/circle.png",
+
 };

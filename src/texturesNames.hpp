@@ -21,6 +21,16 @@ enum IMG_names : unsigned {
     IMG_GUI_FLAG_GER,
     IMG_GUI_FLAG_BEL,
 
+    // Programm part
+    IMG_COMP_CIRCLE,
+    IMG_COMP_SINGLE_HIDGE,
+    IMG_COMP_DOUBLE_HIDGE,
+    IMG_COMP_SEALING,
+
+    IMG_COMP_MOMENT,
+    IMG_COMP_FORCE,
+    IMG_COMP_DISTRIBUTE_LOAD,
+
     // Global counter of all textures
     IMG_count,
 };

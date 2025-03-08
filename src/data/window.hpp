@@ -34,6 +34,7 @@ class Window {
     // Draw simple geometric figures
     void drawPoint(float x, float y) const;
     void drawRect(const SDL_FRect& rect) const;
+    void drawLine(float x1, float y1, float x2, float y2) const;
 
     // Work with loaded data
     SDL_Texture* getTexture(IMG_names name) const;

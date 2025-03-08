@@ -64,6 +64,10 @@ void Window::drawRect(const SDL_FRect& _rect) const {
     SDL_RenderFillRect(renderer, &_rect);
 }
 
+void Window::drawLine(float x1, float y1, float x2, float y2) const {
+    SDL_RenderLine(renderer, x1, y1, x2, y2);
+}
+
 
 SDL_Texture* Window::getTexture(IMG_names _name) const {
     return textures[_name];

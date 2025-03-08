@@ -7,6 +7,7 @@
 
 // Cycles
 #include "../cycles/selectCycle.hpp"
+#include "../cycles/computingCycle.hpp"
 
 
 App::App()
@@ -33,6 +34,14 @@ void App::run() {
             {
                 // Cycle with game menu and selection of mode
                 SelectCycle cycle(*this);
+                cycle.run(*this);
+            }
+            break;
+
+        case CYCLE_COMPUTING:
+            {
+                // Cycle with game menu and selection of mode
+                ComputingCycle cycle(*this);
                 cycle.run(*this);
             }
             break;
