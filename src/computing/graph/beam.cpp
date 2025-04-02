@@ -11,8 +11,8 @@ Beam::~Beam() {
 
 }
 
-void Beam::draw() const {
+void Beam::draw(const Window& target) const {
     target.drawLine(p1.x, p1.y, p2.x, p2.y);
-    //p1.draw(target);
-    //p2.draw(target);
+    p1.draw(target);
+    p2.draw(target);
 }

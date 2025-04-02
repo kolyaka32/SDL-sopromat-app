@@ -6,11 +6,11 @@
 #pragma once
 
 
-#include "point.hpp"
 #include "../../data/window.hpp"
 
 
 enum NODE_types {
+    NODE_NONE,
     NODE_CIRCLE,
     NODE_SINGLE_HIDGE,
     NODE_DOUBLE_HIDGE,
@@ -18,10 +18,10 @@ enum NODE_types {
 };
 
 
-class Node : public Point {
+class Node {
 public:
-    SDL_FRect dest;
-    SDL_Texture* texture;
+    // Coordinats
+    float x, y;
 
 public:
     Node(const Window& target, float X, float Y, NODE_types type = NODE_CIRCLE);

@@ -15,8 +15,6 @@
 // Cycle for select variants to start
 class ComputingCycle : public BaseCycle {
 private:
-    Grid grid;
-    Graph field;
     GraphInterface interface;
 
     // New overrided cycle functions

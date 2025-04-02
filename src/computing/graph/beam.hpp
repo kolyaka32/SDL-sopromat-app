@@ -6,8 +6,6 @@
 #pragma once
 
 
-
-#include "line.hpp"
 #include "node.hpp"
 #include "../../data/window.hpp"
 
@@ -22,5 +20,5 @@ public:
 public:
     Beam(const Window& target, Node& p1, Node& p2);
     ~Beam();
-    void draw() const;
+    void draw(const Window& target) const;
 };

@@ -3,8 +3,6 @@
 
 ComputingCycle::ComputingCycle(const App& _app)
 : BaseCycle(_app),
-grid(_app.window),
-field(_app.window),
 interface(_app.window) {
 
 }
@@ -40,11 +38,6 @@ void ComputingCycle::draw(const App& _app) const {
     //background.blit(_app.window);
     _app.window.setDrawColor(BLACK);
     _app.window.clear();
-
-    // Bliting title
-    grid.draw(_app.window);
-
-    field.draw(_app.window);
 
     interface.draw(_app.window);
 

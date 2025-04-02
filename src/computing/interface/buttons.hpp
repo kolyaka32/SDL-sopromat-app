@@ -7,15 +7,14 @@
 
 #include "../data/window.hpp"
 
-class GraphInterface {
+
+class Buttons {
 private:
-    
+    /* data */
+
 public:
-    GraphInterface(const Window& target);
-    ~GraphInterface();
+    Buttons(const Window& target);
+    ~Buttons();
     void draw(const Window& target) const;
     void click(float mouseX, float mouseY);
-    void unClick(float mouseX, float mouseY);
-    void zoomIn(float mouseX, float mouseY);
-    void zoomOut(float mouseX, float mouseY);
 };
