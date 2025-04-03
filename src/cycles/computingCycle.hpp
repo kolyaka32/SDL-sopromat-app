@@ -19,7 +19,11 @@ private:
 
     // New overrided cycle functions
     void inputMouseDown(App& app) override;
+    void inputMouseUp(App& app) override;
     void inputKeys(App& app, SDL_Keycode key) override;
+    void inputMouseWheel(App& app, float _wheelY) override;
+    void inputText(App& app, const char* text) override;
+
     void update(App& app) override;
     void draw(const App& app) const override;
 

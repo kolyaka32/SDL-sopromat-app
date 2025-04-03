@@ -59,12 +59,8 @@ void Graph::unClick(float mouseX, float mouseY) {
     grid.unClick(mouseX, mouseY);
 }
 
-void Graph::zoomIn(float mouseX, float mouseY) {
-    grid.zoomIn(mouseX, mouseY);
-}
-
-void Graph::zoomOut(float mouseX, float mouseY) {
-    grid.zoomOut(mouseX, mouseY);
+void Graph::zoom(float mouseX, float mouseY, float wheelY) {
+    grid.zoom(mouseX, mouseY, wheelY);
 }
 
 

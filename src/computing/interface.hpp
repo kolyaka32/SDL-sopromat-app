@@ -23,6 +23,5 @@ public:
     void update(float mouseX, float mouseY);
     void click(float mouseX, float mouseY);
     void unClick(float mouseX, float mouseY);
-    void zoomIn(float mouseX, float mouseY);
-    void zoomOut(float mouseX, float mouseY);
+    void zoom(float mouseX, float mouseY, float wheelY);
 };

@@ -20,7 +20,11 @@ void ComputingCycle::inputMouseDown(App& _app) {
     return;
 }
 
-// Example for getting keys input
+void ComputingCycle::inputMouseUp(App& app) {
+    settings.unClick();
+    interface.unClick(mouseX, mouseY);
+}
+
 void ComputingCycle::inputKeys(App& _app, SDL_Keycode _key) {
     switch (_key) {
     case SDLK_ESCAPE:
@@ -29,12 +33,26 @@ void ComputingCycle::inputKeys(App& _app, SDL_Keycode _key) {
     }
 }
 
+void ComputingCycle::inputMouseWheel(App& _app, float _wheelY) {
+    interface.zoom(mouseX, mouseY, _wheelY);
+}
+
+void ComputingCycle::inputText(App& _app, const char* _text) {
+    // pass
+}
+
 void ComputingCycle::update(App& _app) {
     //background.update();
-    settings.update(_app);
 
-    // Updating graph
-    interface.update(mouseX, mouseY);
+    if (settings.isActive()) {
+        settings.update(_app);
+    } else {
+        // Updating coordinats
+        updateMousePos();
+
+        // Updating graph
+        interface.update(mouseX, mouseY);
+    }
 }
 
 // Drawing background with all buttons

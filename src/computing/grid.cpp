@@ -18,14 +18,16 @@ Grid::~Grid() {
 }
 
 void Grid::draw(const Window& _target) const {
-    _target.drawPoint(localX(0), localY(0));
+    _target.setDrawColor(WHITE);
+    _target.drawRect({localX(20), localY(20), 50*scale, 50*scale});
 }
 
 void Grid::update(float mouseX, float mouseY) {
     if (capture) {
         // Keeping captured point at it place
-        centerX = absoluteX(mouseX) - captureX;
-        centerY = absoluteX(mouseY) - captureY;
+        centerX = captureX - mouseX/scale;
+        centerY = captureY - mouseY/scale;
+        //SDL_Log("Press at %f : %f, get at %f : %f", mouseX, mouseY, centerX, centerY);
     }
 }
 
@@ -33,33 +35,42 @@ void Grid::click(float mouseX, float mouseY) {
     capture = true;
     captureX = absoluteX(mouseX);
     captureY = absoluteY(mouseY);
+    //SDL_Log("Press at %f : %f, get at %f : %f", mouseX, mouseY, captureX, captureY);
 }
 
 void Grid::unClick(float mouseX, float mouseY) {
     capture = false;
 }
 
-void Grid::zoomIn(float mouseX, float mouseY) {
-    scale *= 1.2;
-}
+void Grid::zoom(float mouseX, float mouseY, float wheelY) {
+    
+    centerX += mouseX/scale;
+    centerY += mouseY/scale;
 
-void Grid::zoomOut(float mouseX, float mouseY) {
-    scale /= 1.2;
+    //scale += wheelY;
+    if (scale > 0) {
+        scale *= SDL_powf(1.5, wheelY);
+    } else {
+        scale /= SDL_powf(1.5, -wheelY);
+    }
+
+    centerX -= mouseX/scale;
+    centerY -= mouseY/scale;
 }
 
 // Local-absolute transformations
 absolute Grid::absoluteX(local _x) const {
-    return _x * scale + centerX;
+    return _x / scale + centerX;
 }
 
 absolute Grid::absoluteY(local _y) const {
-    return _y * scale + centerY;
+    return _y / scale + centerY;
 }
 
 local Grid::localX(absolute _x) const {
-    return (_x - centerX) / scale;
+    return (_x - centerX) * scale;
 }
 
 local Grid::localY(absolute _y) const {
-    return (_y - centerY) / scale;
+    return (_y - centerY) * scale;
 }

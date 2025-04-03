@@ -26,22 +26,18 @@ void GraphInterface::draw(const Window& _target) const {
 }
 
 // Updating
-void GraphInterface::update(float mouseX, float mouseY) {
-    graph.update(mouseX, mouseY);
+void GraphInterface::update(float _mouseX, float _mouseY) {
+    graph.update(_mouseX, _mouseY);
 }
 
-void GraphInterface::click(float mouseX, float mouseY) {
-    graph.click(mouseX, mouseY);
+void GraphInterface::click(float _mouseX, float _mouseY) {
+    graph.click(_mouseX, _mouseY);
 }
 
-void GraphInterface::unClick(float mouseX, float mouseY) {
-    graph.unClick(mouseX, mouseY);
+void GraphInterface::unClick(float _mouseX, float _mouseY) {
+    graph.unClick(_mouseX, _mouseY);
 }
 
-void GraphInterface::zoomIn(float mouseX, float mouseY) {
-    graph.zoomIn(mouseX, mouseY);
-}
-
-void GraphInterface::zoomOut(float mouseX, float mouseY) {
-    graph.zoomOut(mouseX, mouseY);
+void GraphInterface::zoom(float _mouseX, float _mouseY, float _wheelY) {
+    graph.zoom(_mouseX, _mouseY, _wheelY);
 }
