@@ -3,7 +3,6 @@
  * <nik.kazankov.05@mail.ru>
  */
 
-//#include "../data/data.hpp"
 #include "baseGUI.hpp"
 
 using namespace GUI;
@@ -32,9 +31,9 @@ void Slider::blit(const Window& _target) const {
     _target.blit(textureButton, buttonRect);
 }
 
-unsigned Slider::setValue(float mouseX) {
+unsigned Slider::setValue(float _mouseX) {
     // Setting new position
-    buttonRect.x = mouseX;
+    buttonRect.x = _mouseX;
 
     // Setting borders for position
     SET_MAX(buttonRect.x, rect.x + rect.w);
@@ -46,8 +45,8 @@ unsigned Slider::setValue(float mouseX) {
     return buttonRect.x - rect.x + buttonRect.w/2;
 }
 
-unsigned Slider::scroll(float wheelY) {
-    if (wheelY > 0) {
+unsigned Slider::scroll(float _wheelY) {
+    if (_wheelY > 0) {
         return setValue(buttonRect.x + buttonRect.w/2 + 8);
     } else {
         return setValue(buttonRect.x + buttonRect.w/2 - 8);

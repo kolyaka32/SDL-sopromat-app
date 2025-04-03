@@ -16,10 +16,18 @@ settings{_app} {
     }
 }
 
-void BaseCycle::update(App& _app) {
-    settings.update(_app);
+void BaseCycle::inputMouseDown(App& _app) {
+    settings.click(mouseX, mouseY);
 }
 
-void BaseCycle::getAnotherInput(App& _app, const SDL_Event& event) {
-    settings.getAnotherInput(_app, event);
+void BaseCycle::inputMouseUp(App& _app) {
+    settings.unClick();
+}
+
+void BaseCycle::inputMouseWheel(App& _app, float _wheelY) {
+    settings.scroll(_app, mouseX, mouseY, _wheelY);
+}
+
+void BaseCycle::update(App& _app) {
+    settings.update(_app);
 }

@@ -24,8 +24,8 @@ public:
     float x, y;
 
 public:
-    Node(const Window& target, float X, float Y, NODE_types type = NODE_CIRCLE);
+    Node(float X, float Y);
     ~Node();
-    void setType(const Window& target, NODE_types newType);
-    void draw(const Window& target) const;
+    //void setType(const Window& target, NODE_types newType);
+    //void draw(const Window& target) const;
 };

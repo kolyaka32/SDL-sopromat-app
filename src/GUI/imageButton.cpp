@@ -3,13 +3,11 @@
  * <nik.kazankov.05@mail.ru>
  */
 
-
 #include "baseGUI.hpp"
 
 using namespace GUI;
 
 
-// Button class
 ImageButton::ImageButton(const Window& _target, float _x, float _y, IMG_names _index) {
     // Setting base texture
     texture = _target.getTexture(_index);

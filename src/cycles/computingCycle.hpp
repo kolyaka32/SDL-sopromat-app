@@ -18,8 +18,8 @@ private:
     GraphInterface interface;
 
     // New overrided cycle functions
-    void getMouseInput(App& app) override;
-    void getKeysInput(App& app, SDL_Keycode key) override;
+    void inputMouseDown(App& app) override;
+    void inputKeys(App& app, SDL_Keycode key) override;
     void update(App& app) override;
     void draw(const App& app) const override;
 

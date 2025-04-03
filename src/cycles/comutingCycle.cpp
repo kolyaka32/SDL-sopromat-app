@@ -8,18 +8,20 @@ interface(_app.window) {
 }
 
 // Getting selected button
-void ComputingCycle::getMouseInput(App& _app) {
+void ComputingCycle::inputMouseDown(App& _app) {
     if (settings.click(mouseX, mouseY)) {
         // Updating location
         _app.window.updateTitle();
         restart();
         return;
+    } else {
+        interface.click(mouseX, mouseY);
     }
     return;
 }
 
 // Example for getting keys input
-void ComputingCycle::getKeysInput(App& _app, SDL_Keycode _key) {
+void ComputingCycle::inputKeys(App& _app, SDL_Keycode _key) {
     switch (_key) {
     case SDLK_ESCAPE:
         settings.activate();
@@ -30,6 +32,9 @@ void ComputingCycle::getKeysInput(App& _app, SDL_Keycode _key) {
 void ComputingCycle::update(App& _app) {
     //background.update();
     settings.update(_app);
+
+    // Updating graph
+    interface.update(mouseX, mouseY);
 }
 
 // Drawing background with all buttons

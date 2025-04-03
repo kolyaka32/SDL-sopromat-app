@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "../data/window.hpp"
+#include "../../data/window.hpp"
 
 
 class Buttons {

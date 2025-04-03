@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include "../../data/window.hpp"
+
 
 class BaseLoad {
 private:

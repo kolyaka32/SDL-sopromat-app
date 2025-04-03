@@ -7,13 +7,17 @@
 
 #include "graph/beam.hpp"
 #include <vector>
+#include "grid.hpp"
 #include "loads/baseLoad.hpp"
 #include "supports/baseSupport.hpp"
 
 
 class Graph {
 public:
-    // Structure
+    // Location operation system
+    Grid grid;
+
+    // Graph structure
     std::vector<Node> nodes{};
     std::vector<Beam> beams{};
 
@@ -30,7 +34,17 @@ public:
     void addBeam();
     void removeBeam();
     void removePoint();
+
+    // Working with app
     void draw(const Window& target) const;
+    // Updating place
+    void update(float mouseX, float mouseY);
+    void click(float mouseX, float mouseY);
+    void unClick(float mouseX, float mouseY);
+    void zoomIn(float mouseX, float mouseY);
+    void zoomOut(float mouseX, float mouseY);
+
+    // Save system
     void load();
-    void save();
+    void save() const;
 };

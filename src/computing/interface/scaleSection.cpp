@@ -3,7 +3,7 @@
  * <nik.kazankov.05@mail.ru>
  */
 
-#include "scaleLine.hpp"
+#include "scaleSection.hpp"
 
 
 ScaleSection::ScaleSection() {
